@@ -23,19 +23,19 @@ head {
 button {
   background-color: #0b0724;
   color: floralwhite;
-  border: 2px solid orange;
+  border: 1px solid orange;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 2px 4px;
   margin: 5px;
   cursor: pointer;
 }
 button:hover {
   transition: 1000ms;
-  padding: 10px 50px;
+  padding: 2px 8px;
   transform: translateY(-0px);
   background-color: #0b0724;
   color: floralwhite;
-  border: solid 4px orange;
+  border: solid 3px orange;
 }
 #hi {
   height: 2px;
@@ -43,8 +43,8 @@ button:hover {
 input {
   height: 14px;
   width: 480px;
-  padding: 10px;
-  border: 2px solid orange;
+  padding: 5px;
+  border: 1px solid orange;
   border-radius: 5px;
   background-color: #141414;
   color: floralwhite;
@@ -184,6 +184,7 @@ select {
   align-items: center;
   text-align: center;
   margin-left: 0 auto;
+  border: 2px dotted #ffffff;
 }
 
 #randomthingtrustbutt {
@@ -193,22 +194,15 @@ select {
 #headertoggle2 {
   position: absolute;
   right: 0px;
-  top: 25px;
+  bottom: 75px;
   max-width: 25px;
 }
 
-#headertoggle2:hover {
-  position: absolute;
-  left: 0px;
-  top: 25px;
-  max-width: 25px;
-}
+
 #headertoggle2div {
-  position: absolute;
+  position: relative;
   left: 0px;
-  top: 25px;
-  align-self: left;
-  align-content: left;
+  
   background-color: aliceblue;
 }
 #trafsftsfwtgsuwgsgwshwj {
@@ -224,6 +218,7 @@ select {
   position: absolute;
   top: 139px;
   right: 0%;
+  border: 2px dotted white;
 }
 #minidiv3 {
   background-color: #333333;
@@ -235,6 +230,19 @@ select {
   position: absolute;
   right: 0%;
   top: 490px;
+  border: 2px dotted white;
+}
+#minidiv5 {
+  background-color: #333333;
+  border-radius: 50px;
+  width: 600px;
+  align-self: right;
+  align-items: right;
+  text-align: center;
+  position: absolute;
+  right: 0%;
+  top: 650px;
+  border: 2px dotted white;
 }
 #search {
   height: 14px;
@@ -273,4 +281,26 @@ select {
   background-color: #141414;
   color: floralwhite;
   font-size: 13px;
+}
+#sidebartoggler {
+  position: absolute;
+  left: 1px;
+  top: 250px;
+  height: 50px;
+}
+#sidebartoggler2 {
+  position: absolute;
+  left: 75px;
+  top: 250px;
+  height: 50px;
+}
+#sb {
+  position: absolute;
+  left: 1px;
+  background-color: #313131;
+  border: 2px dashed whitesmoke; 
+  height: 50px;
+  width: 70px;
+  top: 253px;
+  text-align: center;
 }

@@ -73,6 +73,29 @@
         function search_show() {
           window.open("./portal")
         }
+        function sidebar_toggle() {
+          $("#sb").toggle();
+        }
+        $(document).ready(function () { 
+           $("#sidebartoggler").click(function () {
+                $("#sidebartoggler").toggle();
+            });
+        });
+        $(document).ready(function () { 
+           $("#sidebartoggler").click(function () {
+                $("#sidebartoggler2").toggle();
+            });
+        });
+        $(document).ready(function () { 
+           $("#sidebartoggler2").click(function () {
+                $("#sidebartoggler2").toggle();
+            });
+        });
+        $(document).ready(function () { 
+           $("#sidebartoggler2").click(function () {
+                $("#sidebartoggler").toggle();
+            });
+        });
   </script>
 </head>
 
@@ -83,11 +106,27 @@
     var button = document.getElementsByTagName("button");
     var url = 'https://google.com';
   </script>
+  <button id="sidebartoggler" type="button" onclick="sidebar_toggle()">
+    >
+  </button>
+  <button id="sidebartoggler2" type="button" style="display: none;" onclick="sidebar_toggle()">
+    <
+  </button>
+  
+  <div class="sidebar" id="sb" style="display: none;">
+    <br>
+    <script>
+    function panic() {
+      window.open(url, "_self")
+    }
+    </script>
+    <button onclick = "panic()">Panic button</button>
+    <br>
+  </div>
       <div style="display:none;"class="header" id="header">
         <!--header contents-->
-          <button onclick="search_show()">portal</button>
-          <button onclick="passcodechange()">change passcode
-  </button> 
+          
+           
           <button class="button" type="button" onclick="calculator()">Calculator
   </button>  
           <button class="button" type="button" onclick="Byblk()">luanch Byeblocker
@@ -98,17 +137,17 @@
         <button class="button" type="button" onclick="proxylist()">
     Procky list
   </button>
-        <button class="button" type="button" onclick="panic()"><span style="background-color: darkred">panic button click when teacher is close(keybind: `)</span></button>
         
-        <button id = "cust1" type="button" onclick="cust()">
-          <img id = "settingsimg" src="./assets/images/settings.png"/> 
-        </button>
-        <div id="headertoggle2div">
-          <button style="display:none;" id="headertoggle2">^</button>
-        </div>
+        
+        <button id = "cust1" type="button" onclick="cust()"><img id = "settingsimg" src="./assets/images/settings.png"/></button>
+        
+      </div>
+      <div id="headertoggle2div">
+        <button style="display:none;"id="headertoggle2">^</button>
       </div>
   <div id = "cust">
     <h1>Settings</h1>
+    &copy; Copyright 2024 Aluben Services Corporation all rights reserved
     <div id = "closeset">
       <button id = "closesetbutton"><strong>X</strong></button>
     </div><br><br>
@@ -215,57 +254,44 @@
     <div id="minidiv">
       <h1>default search engine</h1>
       <select id="SE" style="color: aliceblue;">
-        <option value="n/a">Set your search engine</option>
-        <option value="Bing">Bing</option>
-        <option value="Yahooo">Yahoo</option>
-        <option value="Google">Google(Default)</option>
+        <option value="https://www.google.com?igu=1" id="Google">Google(Default)</option>
+        <option value="https://www.bing.com" id="Bing">Bing</option>
+        <option value="https://search.yahoo.com" id="Yahoo">Yahoo</option>
+        
       </select>
       <button onclick="set_browser()" type="button">Set Search Engine</button>
         <script>
-           function set_browser() {
-          var engine = "https://google.com/search?q=";
-          var selectBox = document.getElementById("search");
-          var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-          if (selectedValue === "n/a" || selectedValue === "" || selectedValue === null)
-          {
-            alert("please select a valid search engine");
-          }
-          else if (selectedValue === "Bing")
-          {
-            engine = "https://bing.com/search?q="
-          }
-          else if (selectedValue === "Yahoo")
-          {
-            engine = "https://search.yahoo.com/search?p="
-          }
-          else if (selectedValue === "Google")
-          {
-            engine = "https://google.com/search?q="
-          }
+           function set_browser(){
+            alert('Your browser is now ' + engineDisplay);
            }
         </script>
+      </div>
+      <div id="minidiv5">
+        <h1>Passcode Settings</h1>
+        <button onclick="passcodechange()">change passcode
+        </button>
       </div>
     <script>
       function aboutblank() {
         win = window.open();
-        url = "https://is.gd/Aluben_Node/";
+        url4 = "https://is.gd/Aluben_Node/";
         iframe = win.document.createElement("iframe");
         iframe.style =
           "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
-        iframe.src = url;
+        iframe.src = url4;
         win.document.body.appendChild(iframe);
       }
       function aboutblank2() {
         (function () {
-    var url = prompt("Enter website url for cloaked page");
+    var url3 = prompt("Enter website url for cloaked page");
     var win = window.open();
     var iframe = win.document.createElement("iframe");
     iframe.style =
       "position:fixed;width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;z-index:2147483647;background-color:white;border:none;";
-    if (url.includes("https://") || url.includes("http://")) {
-      iframe.src = url;
+    if (url3.includes("https://") || url3.includes("http://")) {
+      iframe.src = url3;
     } else {
-      iframe.src = "https://" + url;
+      iframe.src = "https://" + url3;
     }
     win.document.body.appendChild(iframe);
   })();
@@ -294,7 +320,7 @@
       document.createElement("link");
     link.type = "image/x-icon";
     link.rel = "shortcut icon";
-    link.href = " https://assets.clever.com/launchpad/c4a9bd82e/favicon.ico?1";
+    link.href = "https://assets.clever.com/launchpad/c4a9bd82e/favicon.ico?1";
     document.title = "Clever | Portal";
     console.log(document.title);
     document.getElementsByTagName("head")[0].appendChild(link);
@@ -321,6 +347,7 @@ setInterval(gcloak, 1000);
 }
     </script>
   </div>
+  
   <div id="traf-say"><a href="./Fart"><span class="stinky">traf</span></a></div>
   <div id="7689" style="display: none;">
     go to the Aluben discord server and go to claim then type 
@@ -350,7 +377,7 @@ setInterval(gcloak, 1000);
   <div id="myCustomAlert" class="custom-alert">
     Welcome to Aluben, Set Passcode<br />
 
-    <input type="text" id="hi" onchange="passcode = this.value; console.log('your password is '+ passcode +'')"></input>
+    <input type="password" id="hi" onchange="passcode = this.value; console.log('your password is '+ passcode +'')"></input>
     <button onclick="hideCustomAlert()">Comfirm</button>
   </div>
   <script>
@@ -388,7 +415,7 @@ setInterval(gcloak, 1000);
   </button>
   <br /><br />
 
-  &copy; Aluben Services 2023 inc all rights reserved
+  &copy; Aluben Services 2024 inc all rights reserved
   <br />
 
   <body id="timer" onload="startTime()">

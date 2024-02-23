@@ -1,4 +1,5 @@
 //error//
+
 function Byblk() {
   window.open("./byeblock", "_self");
 }
@@ -27,6 +28,8 @@ function discord() {
 //var passcode = prompt("Welcome to aluben, set your passcode");
 
 function pass1() {
+  var engine = document.getElementById('SE');
+var selectedEngine = engine.options[engine.selectedIndex].value;
   var passwordAttempt = prompt("enter password");
   if (passwordAttempt == passcode) {
     alert("correct passcode");
@@ -42,7 +45,7 @@ function pass1() {
     let ytButton = document.createElement("button");
     ytButton.innerHTML = "Load Nebula";
     let iframe = document.createElement("iframe");
-    (iframe.src = "https://www.bing.com"),
+    (iframe.src = selectedEngine),
       (iframe.width = window.innerWidth),
       (iframe.height = window.innerHeight),
       goButton1.addEventListener("click", () => {
@@ -82,7 +85,7 @@ function pass1() {
     let ytButton = document.createElement("button");
     ytButton.innerHTML = "Load Nebula";
     let iframe = document.createElement("iframe");
-    (iframe.src = "https://www.bing.com"),
+    (iframe.src = selectedEngine),
       (iframe.width = window.innerWidth),
       (iframe.height = window.innerHeight),
       goButton1.addEventListener("click", () => {
@@ -114,6 +117,8 @@ function pass1() {
 }
 
 function pass2() {
+  var engine = document.getElementById('SE');
+var selectedEngine = engine.options[engine.selectedIndex].value;
   var passwordAttempt = prompt("enter password");
   if (passwordAttempt == passcode) {
     alert("correct passcode");
@@ -129,7 +134,7 @@ function pass2() {
     let ytButton = document.createElement("button");
     ytButton.innerHTML = "Load Abyss";
     let iframe = document.createElement("iframe");
-    (iframe.src = "https://www.google.com?igu=1"),
+    (iframe.src = selectedEngine),
       (iframe.width = window.innerWidth),
       (iframe.height = window.innerHeight),
       goButton1.addEventListener("click", () => {
@@ -169,7 +174,7 @@ function pass2() {
     let ytButton = document.createElement("button");
     ytButton.innerHTML = "Load Abyss";
     let iframe = document.createElement("iframe");
-    (iframe.src = "https://www.bing.com"),
+    (iframe.src = selectedEngine),
       (iframe.width = window.innerWidth),
       (iframe.height = window.innerHeight),
       goButton1.addEventListener("click", () => {
